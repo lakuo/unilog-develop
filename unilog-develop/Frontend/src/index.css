@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Lay Of The Land;
+  src: url(./assets/Lay\ Of\ The\ Land.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.euiCheckbox__square {
+  top: 4px !important;
+}
+
+.noc-table .euiTableHeaderCell,
+.noc-table .euiTableRowCell {
+  border: none;
+}
+
+.noc-table .euiTableCellContent {
+  padding: 0;
+}
+
+.noc-table .euiTableHeaderCell .euiTableCellContent,
+.noc-table .euiTableRowCell:not(:first-child) .euiTableCellContent {
+  justify-content: flex-end;
+}
+
+.noc-table .euiTableHeaderCell:not(:first-child) {
+  width: 60px;
+}
+
+.noc-table .euiTableHeaderCell .euiTableCellContent__text {
+  color: #006bb4;
+}
+
+.noc-table .euiTableCellContent__text {
+  font-size: 12px;
+}
+
+.backup-table .euiTableHeaderCell:first-child {
+  width: 40px;
+}

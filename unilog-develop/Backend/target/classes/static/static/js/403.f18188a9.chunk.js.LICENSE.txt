@@ -1,0 +1,885 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*! !sass-vars-to-js-loader!../../global_styling/variables/_colors.scss */
+
+/*! !sass-vars-to-js-loader!../../themes/eui/eui_colors_dark.scss */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+/*! ../../services/color/eui_palettes */
+
+/*! ../../services/color/visualization_colors */
+
+/*! ../internals/a-function */
+
+/*! ../internals/a-possible-prototype */
+
+/*! ../internals/add-to-unscopables */
+
+/*! ../internals/an-object */
+
+/*! ../internals/array-from */
+
+/*! ../internals/array-includes */
+
+/*! ../internals/array-iteration */
+
+/*! ../internals/array-method-has-species-support */
+
+/*! ../internals/array-method-is-strict */
+
+/*! ../internals/array-method-uses-to-length */
+
+/*! ../internals/array-species-create */
+
+/*! ../internals/call-with-safe-iteration-closing */
+
+/*! ../internals/check-correctness-of-iteration */
+
+/*! ../internals/classof */
+
+/*! ../internals/classof-raw */
+
+/*! ../internals/copy-constructor-properties */
+
+/*! ../internals/correct-prototype-getter */
+
+/*! ../internals/create-iterator-constructor */
+
+/*! ../internals/create-non-enumerable-property */
+
+/*! ../internals/create-property */
+
+/*! ../internals/create-property-descriptor */
+
+/*! ../internals/define-iterator */
+
+/*! ../internals/define-well-known-symbol */
+
+/*! ../internals/descriptors */
+
+/*! ../internals/document-create-element */
+
+/*! ../internals/dom-iterables */
+
+/*! ../internals/engine-user-agent */
+
+/*! ../internals/engine-v8-version */
+
+/*! ../internals/enum-bug-keys */
+
+/*! ../internals/export */
+
+/*! ../internals/fails */
+
+/*! ../internals/function-bind-context */
+
+/*! ../internals/get-built-in */
+
+/*! ../internals/get-iterator-method */
+
+/*! ../internals/global */
+
+/*! ../internals/has */
+
+/*! ../internals/hidden-keys */
+
+/*! ../internals/html */
+
+/*! ../internals/ie8-dom-define */
+
+/*! ../internals/indexed-object */
+
+/*! ../internals/inspect-source */
+
+/*! ../internals/internal-state */
+
+/*! ../internals/is-array */
+
+/*! ../internals/is-array-iterator-method */
+
+/*! ../internals/is-forced */
+
+/*! ../internals/is-object */
+
+/*! ../internals/is-pure */
+
+/*! ../internals/iterators */
+
+/*! ../internals/iterators-core */
+
+/*! ../internals/native-symbol */
+
+/*! ../internals/native-weak-map */
+
+/*! ../internals/object-create */
+
+/*! ../internals/object-define-properties */
+
+/*! ../internals/object-define-property */
+
+/*! ../internals/object-get-own-property-descriptor */
+
+/*! ../internals/object-get-own-property-names */
+
+/*! ../internals/object-get-own-property-names-external */
+
+/*! ../internals/object-get-own-property-symbols */
+
+/*! ../internals/object-get-prototype-of */
+
+/*! ../internals/object-keys */
+
+/*! ../internals/object-keys-internal */
+
+/*! ../internals/object-property-is-enumerable */
+
+/*! ../internals/object-set-prototype-of */
+
+/*! ../internals/object-to-string */
+
+/*! ../internals/own-keys */
+
+/*! ../internals/path */
+
+/*! ../internals/redefine */
+
+/*! ../internals/regexp-flags */
+
+/*! ../internals/require-object-coercible */
+
+/*! ../internals/set-global */
+
+/*! ../internals/set-to-string-tag */
+
+/*! ../internals/shared */
+
+/*! ../internals/shared-key */
+
+/*! ../internals/shared-store */
+
+/*! ../internals/string-multibyte */
+
+/*! ../internals/to-absolute-index */
+
+/*! ../internals/to-indexed-object */
+
+/*! ../internals/to-integer */
+
+/*! ../internals/to-length */
+
+/*! ../internals/to-object */
+
+/*! ../internals/to-primitive */
+
+/*! ../internals/to-string-tag-support */
+
+/*! ../internals/uid */
+
+/*! ../internals/use-symbol-as-uid */
+
+/*! ../internals/well-known-symbol */
+
+/*! ../internals/well-known-symbol-wrapped */
+
+/*! ../modules/es.array.iterator */
+
+/*! ./../../webpack/buildin/global.js */
+
+/*! ./color_palette */
+
+/*! @preserve
+ * numeral.js
+ * version : 2.0.6
+ * author : Adam Draper
+ * license : MIT
+ * http://adamwdraper.github.com/Numeral-js/
+ */
+
+/*! chroma-js */
+
+/*! core-js/modules/es.array.concat */
+
+/*! core-js/modules/es.array.filter */
+
+/*! core-js/modules/es.array.from */
+
+/*! core-js/modules/es.array.iterator */
+
+/*! core-js/modules/es.array.map */
+
+/*! core-js/modules/es.array.reverse */
+
+/*! core-js/modules/es.array.slice */
+
+/*! core-js/modules/es.array.sort */
+
+/*! core-js/modules/es.object.to-string */
+
+/*! core-js/modules/es.regexp.to-string */
+
+/*! core-js/modules/es.string.iterator */
+
+/*! core-js/modules/es.symbol */
+
+/*! core-js/modules/es.symbol.description */
+
+/*! core-js/modules/es.symbol.iterator */
+
+/*! core-js/modules/web.dom-collections.iterator */
+
+/*! exports provided: euiColorPrimary, euiColorSecondary, euiColorAccent, euiColorHighlight, euiColorGhost, euiColorInk, euiColorSuccess, euiColorDanger, euiColorWarning, euiColorEmptyShade, euiColorLightestShade, euiColorLightShade, euiColorMediumShade, euiColorDarkShade, euiColorDarkestShade, euiColorFullShade, euiTextColor, euiPageBackgroundColor, euiTextSubduedColor, euiTitleColor, euiLinkColor, euiFocusBackgroundColor, euiColorPrimaryText, euiColorSecondaryText, euiColorAccentText, euiColorWarningText, euiColorDangerText, euiColorSuccessText, euiPaletteColorBlind, euiPaletteColorBlindKeys, euiColorVis0, euiColorVis1, euiColorVis2, euiColorVis3, euiColorVis4, euiColorVis5, euiColorVis6, euiColorVis7, euiColorVis8, euiColorVis9, euiColorVis0BehindText, euiColorVis1BehindText, euiColorVis2BehindText, euiColorVis3BehindText, euiColorVis4BehindText, euiColorVis5BehindText, euiColorVis6BehindText, euiColorVis7BehindText, euiColorVis8BehindText, euiColorVis9BehindText, euiColorChartLines, euiColorChartBand, euiCodeBlockBackgroundColor, euiCodeBlockColor, euiCodeBlockSelectedBackgroundColor, euiCodeBlockCommentColor, euiCodeBlockSelectorTagColor, euiCodeBlockStringColor, euiCodeBlockTagColor, euiCodeBlockNameColor, euiCodeBlockNumberColor, euiCodeBlockKeywordColor, euiCodeBlockFunctionTitleColor, euiCodeBlockTypeColor, euiCodeBlockAttributeColor, euiCodeBlockSymbolColor, euiCodeBlockParamsColor, euiCodeBlockMetaColor, euiCodeBlockTitleColor, euiCodeBlockSectionColor, euiCodeBlockAdditionColor, euiCodeBlockDeletionColor, euiCodeBlockSelectorClassColor, euiCodeBlockSelectorIdColor, default */
+
+/*! exports provided: euiColorPrimary, euiColorSecondary, euiColorAccent, euiColorHighlight, euiColorGhost, euiColorInk, euiColorSuccess, euiColorWarning, euiColorDanger, euiColorEmptyShade, euiColorLightestShade, euiColorLightShade, euiColorMediumShade, euiColorDarkShade, euiColorDarkestShade, euiColorFullShade, euiTextColor, euiLinkColor, euiFocusBackgroundColor, euiShadowColor, euiShadowColorLarge, euiPageBackgroundColor, euiTextSubduedColor, euiTitleColor, euiColorPrimaryText, euiColorSecondaryText, euiColorAccentText, euiColorWarningText, euiColorDangerText, euiColorSuccessText, euiColorChartLines, euiColorChartBand, default */
+
+/*! no static exports found */
+
+/*!*********************************!*\
+    !*** ./themes/charts/themes.ts ***!
+    \*********************************/
+
+/*!****************************************!*\
+    !*** ./services/color/eui_palettes.ts ***!
+    \****************************************/
+
+/*!*****************************************!*\
+    !*** ./services/color/color_palette.ts ***!
+    \*****************************************/
+
+/*!*******************************************!*\
+    !*** ../node_modules/chroma-js/chroma.js ***!
+    \*******************************************/
+
+/*!************************************************!*\
+    !*** ../node_modules/core-js/internals/has.js ***!
+    \************************************************/
+
+/*!************************************************!*\
+    !*** ../node_modules/core-js/internals/uid.js ***!
+    \************************************************/
+
+/*!************************************************!*\
+    !*** ./services/color/visualization_colors.ts ***!
+    \************************************************/
+
+/*!*************************************************!*\
+    !*** ../node_modules/core-js/internals/html.js ***!
+    \*************************************************/
+
+/*!*************************************************!*\
+    !*** ../node_modules/core-js/internals/path.js ***!
+    \*************************************************/
+
+/*!*************************************************!*\
+    !*** ../node_modules/webpack/buildin/global.js ***!
+    \*************************************************/
+
+/*!**************************************************!*\
+    !*** ../node_modules/core-js/internals/fails.js ***!
+    \**************************************************/
+
+/*!***************************************************!*\
+    !*** ../node_modules/core-js/internals/export.js ***!
+    \***************************************************/
+
+/*!***************************************************!*\
+    !*** ../node_modules/core-js/internals/global.js ***!
+    \***************************************************/
+
+/*!***************************************************!*\
+    !*** ../node_modules/core-js/internals/shared.js ***!
+    \***************************************************/
+
+/*!****************************************************!*\
+    !*** ../node_modules/core-js/internals/classof.js ***!
+    \****************************************************/
+
+/*!****************************************************!*\
+    !*** ../node_modules/core-js/internals/is-pure.js ***!
+    \****************************************************/
+
+/*!****************************************************!*\
+    !*** ../node_modules/core-js/modules/es.symbol.js ***!
+    \****************************************************/
+
+/*!*****************************************************!*\
+    !*** ../node_modules/core-js/internals/is-array.js ***!
+    \*****************************************************/
+
+/*!*****************************************************!*\
+    !*** ../node_modules/core-js/internals/own-keys.js ***!
+    \*****************************************************/
+
+/*!*****************************************************!*\
+    !*** ../node_modules/core-js/internals/redefine.js ***!
+    \*****************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/an-object.js ***!
+    \******************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/is-forced.js ***!
+    \******************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/is-object.js ***!
+    \******************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/iterators.js ***!
+    \******************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/to-length.js ***!
+    \******************************************************/
+
+/*!******************************************************!*\
+    !*** ../node_modules/core-js/internals/to-object.js ***!
+    \******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/internals/a-function.js ***!
+    \*******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/internals/array-from.js ***!
+    \*******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/internals/set-global.js ***!
+    \*******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/internals/shared-key.js ***!
+    \*******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/internals/to-integer.js ***!
+    \*******************************************************/
+
+/*!*******************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.map.js ***!
+    \*******************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/internals/classof-raw.js ***!
+    \********************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/internals/descriptors.js ***!
+    \********************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/internals/hidden-keys.js ***!
+    \********************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/internals/object-keys.js ***!
+    \********************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.from.js ***!
+    \********************************************************/
+
+/*!********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.sort.js ***!
+    \********************************************************/
+
+/*!*********************************************************!*\
+    !*** ../node_modules/core-js/internals/get-built-in.js ***!
+    \*********************************************************/
+
+/*!*********************************************************!*\
+    !*** ../node_modules/core-js/internals/regexp-flags.js ***!
+    \*********************************************************/
+
+/*!*********************************************************!*\
+    !*** ../node_modules/core-js/internals/shared-store.js ***!
+    \*********************************************************/
+
+/*!*********************************************************!*\
+    !*** ../node_modules/core-js/internals/to-primitive.js ***!
+    \*********************************************************/
+
+/*!*********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.slice.js ***!
+    \*********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/internals/dom-iterables.js ***!
+    \**********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/internals/enum-bug-keys.js ***!
+    \**********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/internals/native-symbol.js ***!
+    \**********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/internals/object-create.js ***!
+    \**********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.concat.js ***!
+    \**********************************************************/
+
+/*!**********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.filter.js ***!
+    \**********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/array-includes.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/ie8-dom-define.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/indexed-object.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/inspect-source.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/internal-state.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/internals/iterators-core.js ***!
+    \***********************************************************/
+
+/*!***********************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.reverse.js ***!
+    \***********************************************************/
+
+/*!************************************************************!*\
+    !*** ../node_modules/core-js/internals/array-iteration.js ***!
+    \************************************************************/
+
+/*!************************************************************!*\
+    !*** ../node_modules/core-js/internals/create-property.js ***!
+    \************************************************************/
+
+/*!************************************************************!*\
+    !*** ../node_modules/core-js/internals/define-iterator.js ***!
+    \************************************************************/
+
+/*!************************************************************!*\
+    !*** ../node_modules/core-js/internals/native-weak-map.js ***!
+    \************************************************************/
+
+/*!************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.array.iterator.js ***!
+    \************************************************************/
+
+/*!*************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-to-string.js ***!
+    \*************************************************************/
+
+/*!*************************************************************!*\
+    !*** ../node_modules/core-js/internals/string-multibyte.js ***!
+    \*************************************************************/
+
+/*!*************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.string.iterator.js ***!
+    \*************************************************************/
+
+/*!*************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.symbol.iterator.js ***!
+    \*************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/engine-user-agent.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/engine-v8-version.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/set-to-string-tag.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/to-absolute-index.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/to-indexed-object.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/use-symbol-as-uid.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/internals/well-known-symbol.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.object.to-string.js ***!
+    \**************************************************************/
+
+/*!**************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.regexp.to-string.js ***!
+    \**************************************************************/
+
+/*!***************************************************************!*\
+    !*** ../node_modules/core-js/internals/add-to-unscopables.js ***!
+    \***************************************************************/
+
+/*!****************************************************************!*\
+    !*** ../node_modules/core-js/internals/get-iterator-method.js ***!
+    \****************************************************************/
+
+/*!****************************************************************!*\
+    !*** ../node_modules/core-js/modules/es.symbol.description.js ***!
+    \****************************************************************/
+
+/*!*****************************************************************!*\
+    !*** ../node_modules/core-js/internals/a-possible-prototype.js ***!
+    \*****************************************************************/
+
+/*!*****************************************************************!*\
+    !*** ../node_modules/core-js/internals/array-species-create.js ***!
+    \*****************************************************************/
+
+/*!*****************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-keys-internal.js ***!
+    \*****************************************************************/
+
+/*!******************************************************************!*\
+    !*** ../node_modules/core-js/internals/function-bind-context.js ***!
+    \******************************************************************/
+
+/*!******************************************************************!*\
+    !*** ../node_modules/core-js/internals/to-string-tag-support.js ***!
+    \******************************************************************/
+
+/*!*******************************************************************!*\
+    !*** ../node_modules/core-js/internals/array-method-is-strict.js ***!
+    \*******************************************************************/
+
+/*!*******************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-define-property.js ***!
+    \*******************************************************************/
+
+/*!********************************************************************!*\
+    !*** ../node_modules/core-js/internals/document-create-element.js ***!
+    \********************************************************************/
+
+/*!********************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-get-prototype-of.js ***!
+    \********************************************************************/
+
+/*!********************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-set-prototype-of.js ***!
+    \********************************************************************/
+
+/*!*********************************************************************!*\
+    !*** ../node_modules/core-js/internals/correct-prototype-getter.js ***!
+    \*********************************************************************/
+
+/*!*********************************************************************!*\
+    !*** ../node_modules/core-js/internals/define-well-known-symbol.js ***!
+    \*********************************************************************/
+
+/*!*********************************************************************!*\
+    !*** ../node_modules/core-js/internals/is-array-iterator-method.js ***!
+    \*********************************************************************/
+
+/*!*********************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-define-properties.js ***!
+    \*********************************************************************/
+
+/*!*********************************************************************!*\
+    !*** ../node_modules/core-js/internals/require-object-coercible.js ***!
+    \*********************************************************************/
+
+/*!**********************************************************************!*\
+    !*** ../node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
+    \**********************************************************************/
+
+/*!***********************************************************************!*\
+    !*** ../node_modules/core-js/internals/create-property-descriptor.js ***!
+    \***********************************************************************/
+
+/*!***********************************************************************!*\
+    !*** ../node_modules/core-js/modules/web.dom-collections.iterator.js ***!
+    \***********************************************************************/
+
+/*!************************************************************************!*\
+    !*** ../node_modules/core-js/internals/array-method-uses-to-length.js ***!
+    \************************************************************************/
+
+/*!************************************************************************!*\
+    !*** ../node_modules/core-js/internals/copy-constructor-properties.js ***!
+    \************************************************************************/
+
+/*!************************************************************************!*\
+    !*** ../node_modules/core-js/internals/create-iterator-constructor.js ***!
+    \************************************************************************/
+
+/*!**************************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-get-own-property-names.js ***!
+    \**************************************************************************/
+
+/*!**************************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-property-is-enumerable.js ***!
+    \**************************************************************************/
+
+/*!***************************************************************************!*\
+    !*** ../node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+    \***************************************************************************/
+
+/*!***************************************************************************!*\
+    !*** ../node_modules/core-js/internals/create-non-enumerable-property.js ***!
+    \***************************************************************************/
+
+/*!****************************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+    \****************************************************************************/
+
+/*!*****************************************************************************!*\
+    !*** ../node_modules/core-js/internals/array-method-has-species-support.js ***!
+    \*****************************************************************************/
+
+/*!*****************************************************************************!*\
+    !*** ../node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
+    \*****************************************************************************/
+
+/*!*******************************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+    \*******************************************************************************/
+
+/*!********************************************************************************!*\
+    !*** ../node_modules/sass-vars-to-js-loader!./themes/eui/eui_colors_dark.scss ***!
+    \********************************************************************************/
+
+/*!***********************************************************************************!*\
+    !*** ../node_modules/core-js/internals/object-get-own-property-names-external.js ***!
+    \***********************************************************************************/
+
+/*!**************************************************************************************!*\
+    !*** ../node_modules/sass-vars-to-js-loader!./global_styling/variables/_colors.scss ***!
+    \**************************************************************************************/
+
+/**
+     * chroma.js - JavaScript library for color conversions
+     *
+     * Copyright (c) 2011-2019, Gregor Aisch
+     * All rights reserved.
+     *
+     * Redistribution and use in source and binary forms, with or without
+     * modification, are permitted provided that the following conditions are met:
+     *
+     * 1. Redistributions of source code must retain the above copyright notice, this
+     * list of conditions and the following disclaimer.
+     *
+     * 2. Redistributions in binary form must reproduce the above copyright notice,
+     * this list of conditions and the following disclaimer in the documentation
+     * and/or other materials provided with the distribution.
+     *
+     * 3. The name Gregor Aisch may not be used to endorse or promote products
+     * derived from this software without specific prior written permission.
+     *
+     * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+     * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+     * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+     * DISCLAIMED. IN NO EVENT SHALL GREGOR AISCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+     * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+     * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+     * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+     * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+     * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     *
+     * -------------------------------------------------------
+     *
+     * chroma.js includes colors from colorbrewer2.org, which are released under
+     * the following license:
+     *
+     * Copyright (c) 2002 Cynthia Brewer, Mark Harrower,
+     * and The Pennsylvania State University.
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     * http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing,
+     * software distributed under the License is distributed on an
+     * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+     * either express or implied. See the License for the specific
+     * language governing permissions and limitations under the License.
+     *
+     * ------------------------------------------------------
+     *
+     * Named colors are taken from X11 Color Names.
+     * http://www.w3.org/TR/css3-color/#svg-color
+     *
+     * @preserve
+     */
+
+/**
+ * @license
+ * Lodash <https://lodash.com/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/**
+ * [js-sha256]{@link https://github.com/emn178/js-sha256}
+ *
+ * @version 0.9.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2014-2017
+ * @license MIT
+ */
+
+/**
+ * chroma.js - JavaScript library for color conversions
+ *
+ * Copyright (c) 2011-2019, Gregor Aisch
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. The name Gregor Aisch may not be used to endorse or promote products
+ * derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL GREGOR AISCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * -------------------------------------------------------
+ *
+ * chroma.js includes colors from colorbrewer2.org, which are released under
+ * the following license:
+ *
+ * Copyright (c) 2002 Cynthia Brewer, Mark Harrower,
+ * and The Pennsylvania State University.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific
+ * language governing permissions and limitations under the License.
+ *
+ * ------------------------------------------------------
+ *
+ * Named colors are taken from X11 Color Names.
+ * http://www.w3.org/TR/css3-color/#svg-color
+ *
+ * @preserve
+ */
+
+/** @license React v0.19.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.3.2
+ * react-is.production.min.js
+ *
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+//! Copyright (c) JS Foundation and other contributors
+
+//! github.com/moment/moment-timezone
+
+//! license : MIT
+
+//! moment-timezone.js
+
+//! moment.js
+
+//! moment.js locale configuration
+
+//! version : 0.5.31

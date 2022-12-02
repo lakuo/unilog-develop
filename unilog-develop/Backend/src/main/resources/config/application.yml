@@ -1,0 +1,50 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: HTML
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: 'postgres'
+    #password: 'superadmin'
+    password: '16151427ts'
+  resources:
+     static-locations:  classpath:/static/
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  batch:
+    job:
+      enabled: false
+      initialize-schema: always
+      table-prefix: mail_batch
+        
+server:
+  port: 8081
+#  ssl:
+#      key-store: 
+#               classpath:keystore/keystore.p12
+               #/keystore/keystore.p12
+               #keystore/keystore.p12
+#      key-store-password: 1qaz@WSX3edc
+#      keyStoreType: PKCS12
+      #keyAlias: tomcat
+#      keyAlias: {Alias Name}
+  
+logging:
+  level:
+    demo: INFO
+  file: logs/log.log
+ 
+tokenExpiredTime: 
+  user: 3
+log_path: /logs/
+#Radius server: 10.0.200.149
+#Radius Secrt: demo_radius_secret
+#Radius NAS: 10.0.200.147
+
+watch:
+  cron: 0 0 * * * ?
+
